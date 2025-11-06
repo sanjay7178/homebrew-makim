@@ -1,25 +1,16 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://docs.brew.sh/rubydoc/Formula
-# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 class Makim < Formula
   include Language::Python::Virtualenv
 
-  desc ""
-  homepage ""
+  desc "Tool that helps organize and simplify helper commands using YAML configuration"
+  homepage "http://docs.makim.org/"
   url "https://files.pythonhosted.org/packages/4f/1d/fe3338a301a6a0cfde179193cc8c24e4d873a84fb721a0a0215013a157f2/makim-1.27.0.tar.gz"
   sha256 "10a5608d4ac836122f16b2e9e9b3eae6134715c88f0a6fb76d42d1961685df07"
-  license ""
+  license "MIT"
 
-  depends_on "libffi"      
-  depends_on "openssl"     
+  depends_on "libffi"
+  depends_on "libyaml"
+  depends_on "openssl@3"
   depends_on "python@3.13"
-
-
-  # Additional dependency
-  # resource "" do
-  #   url ""
-  #   sha256 ""
-  # end
 
   resource "apscheduler" do
     url "https://files.pythonhosted.org/packages/d0/81/192db4f8471de5bc1f0d098783decffb1e6e69c4f8b4bc6711094691950b/apscheduler-3.11.1.tar.gz"
@@ -206,15 +197,6 @@ class Makim < Formula
   end
 
   test do
-    # `test do` will create, run in and delete a temporary directory.
-    #
-    # This test will fail and we won't accept that! For Homebrew/homebrew-core
-    # this will need to be a test that verifies the functionality of the
-    # software. Run the test with `brew test makim`. Options passed
-    # to `brew install` such as `--HEAD` also need to be provided to `brew test`.
-    #
-    # The installed folder is not in the path, so use the entire path to any
-    # executables being tested: `system bin/"program", "do", "something"`.
-    system "false"
+    system bin/"makim", "--version"
   end
 end
