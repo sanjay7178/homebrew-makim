@@ -10,9 +10,10 @@ class Makim < Formula
   sha256 "10a5608d4ac836122f16b2e9e9b3eae6134715c88f0a6fb76d42d1961685df07"
   license ""
 
+  depends_on "libffi"      
+  depends_on "openssl"     
   depends_on "python@3.13"
-  depends_on "libffi"
-  depends_on "openssl"
+
 
   # Additional dependency
   # resource "" do
