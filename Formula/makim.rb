@@ -11,15 +11,13 @@ class Makim < Formula
   depends_on "libyaml"
   depends_on "openssl@3"
   depends_on "python@3.13"
+  depends_on "rust" => :build
+  depends_on "pkg-config" => :build
+  depends_on "cmake" => :build
 
   resource "apscheduler" do
     url "https://files.pythonhosted.org/packages/d0/81/192db4f8471de5bc1f0d098783decffb1e6e69c4f8b4bc6711094691950b/apscheduler-3.11.1.tar.gz"
     sha256 "0db77af6400c84d1747fe98a04b8b58f0080c77d11d338c4f507a9752880f221"
-  end
-
-  resource "attrs" do
-    url "https://files.pythonhosted.org/packages/6b/5c/685e6633917e101e5dcb62b9dd76946cbb57c26e133bae9e0cd36033c0a9/attrs-25.4.0.tar.gz"
-    sha256 "16d5969b87f0859ef33a48b35d55ac1be6e42ae49d5e853b597db70c35c57e11"
   end
 
   resource "bcrypt" do
