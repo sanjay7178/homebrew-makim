@@ -11,6 +11,8 @@ class Makim < Formula
   license ""
 
   depends_on "python@3.13"
+  depends_on "libffi"
+  depends_on "openssl"
 
   # Additional dependency
   # resource "" do
