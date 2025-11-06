@@ -8,7 +8,6 @@ class Makim < Formula
   license "MIT"
 
   depends_on "libffi"
-  depends_on "libyaml"
   depends_on "openssl@3"
   depends_on "python@3.13"
 
