@@ -7,11 +7,11 @@ class Makim < Formula
   sha256 "df7f26d262ec7f4abc668584b055410c47eb737677a8eb1bfb21a3c1b48149d3"
   license "BSD-3-Clause"
 
+  depends_on "gcc" => :build
+  depends_on "pkgconf" => :build
   depends_on "rust" => :build
-  depends_on "pkg-config" => :build
   depends_on "libffi"
   depends_on "openssl@3"
-  depends_on "gcc" => :build
   depends_on "python@3.12"
 
   def install
