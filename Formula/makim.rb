@@ -18,11 +18,6 @@ class Makim < Formula
       sha256 "3087dd9ad7aa0218b43341d466ea4dcecb0fde3859a7df4e075e3689c4a7e2ab"
     end
 
-    on_amd do
-      url "https://github.com/makim-org/makim/releases/download/#{version}/makim-linux-x86-64"
-      sha256 "3087dd9ad7aa0218b43341d466ea4dcecb0fde3859a7df4e075e3689c4a7e2ab"
-    end
-
   end
 
   def install
