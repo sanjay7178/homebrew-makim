@@ -4,7 +4,9 @@ class Makim < Formula
   version "1.2.3"
   license "BSD-3-Clause"
 
-  on_macos do
+  depends_on "zlib"
+  
+  on_linux do
     # on_arm do
     #   url "https://github.com/osl-incubator/makim/releases/download/v1.2.3/makim-darwin-arm64"
     #   sha256 "${ARM64_SHA256}"
